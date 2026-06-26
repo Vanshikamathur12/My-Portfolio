@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head>
+<title>My Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.header-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background: white;
+    border-bottom: 1px solid #dee2e6;
+}
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1030;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+.outer-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 2px solid #0d6efd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.inner-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.inner-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+}
+</style>
+</head>
+<body>
+
+<header class="header-fixed p-3">
+<div class="container d-flex justify-content-between align-items-center">
+<h1 class="h3 mb-0">My Portfolio</h1>
+<p class="mb-0 text-muted d-none d-md-block">Vanshika Mathur | BCA Student</p>
+</div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="top: 72px;">
+<div class="container">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="projects.html">Projects</a></li>
+<li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+<li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<section id="home" class="section hero-entry">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-5 mb-4 mb-md-0">
+<div class="outer-circle">
+<div class="inner-circle">
+<img src="pro.jpeg" alt="Profile">
+</div>
+</div>
+</div>
+<div class="col-md-7 text-center text-md-start">
+<div class="page-header">
+<h1 class="display-4 fw-bold">Vanshika Mathur</h1>
+<p class="lead">BCA Student</p>
+</div>
+<a href="cv.png" download="cv.png" class="text-decoration-none">
+  <button class="btn btn-primary btn-lg mt-3 shadow">
+    <i class="bi bi-file-earmark-arrow-down"></i> Download CV
+  </button>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="section bg-light">
+<div class="container">
+<h2 class="text-center mb-5 border-bottom pb-2">About Me</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body text-center">
+<h5 class="card-title text-primary"><i class="bi bi-person"></i> Introduction</h5>
+<p class="card-text">I am <strong>Vanshika Mathur</strong>, a dedicated student pursuing my BCA with a passion for creating functional digital experiences.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body text-center">
+<h5 class="card-title text-primary"><i class="bi bi-book"></i> Educational Goals</h5>
+<p class="card-text">My primary focus is to gain strong technical knowledge to solve real-world problems through code.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100 border-0 shadow-sm">
+<div class="card-body text-center">
+<h5 class="card-title text-primary"><i class="bi bi-briefcase"></i> Career Goals</h5>
+<p class="card-text">I aim to build a robust career at the intersection of IT and banking-related technology.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container">
+<h2 class="text-center mb-5 border-bottom pb-2">Technical Skills</h2>
+<div class="row">
+<div class="col-md-6 mb-4">
+<div class="panel border p-4 rounded bg-white shadow-sm h-100">
+<h3 class="h5 mb-4 text-primary">Core Programming</h3>
+<div class="d-flex flex-wrap gap-2">
+<span class="btn btn-outline-secondary btn-sm"><i class="bi bi-code-slash"></i> Java</span>
+<span class="btn btn-outline-secondary btn-sm"><i class="bi bi-code-slash"></i> Python</span>
+<span class="btn btn-outline-secondary btn-sm"><i class="bi bi-code-slash"></i> C Programming</span>
+<span class="btn btn-outline-secondary btn-sm"><i class="bi bi-layers"></i> Data Structures</span>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-4">
+<div class="panel border p-4 rounded bg-white shadow-sm h-100">
+<h3 class="h5 mb-4 text-primary">Web & Databases</h3>
+<div class="d-flex flex-wrap gap-2">
+<span class="btn btn-outline-success btn-sm">HTML</span>
+<span class="btn btn-outline-success btn-sm">CSS</span>
+<span class="btn btn-outline-success btn-sm">JavaScript</span>
+<span class="btn btn-outline-success btn-sm"><i class="bi bi-database"></i> MySQL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section bg-light">
+<div class="container">
+<h2 class="text-center mb-5 border-bottom pb-2">Contact Me</h2>
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="card shadow p-4">
+<form>
+<div class="mb-3">
+<label class="form-label">Full Name</label>
+<input type="text" class="form-control" placeholder="Your Name" id="name">
+</div>
+<div class="mb-3">
+<label class="form-label">Email Address</label>
+<input type="email" class="form-control" placeholder="vanshika@email.com" id="email">
+</div>
+<div class="mb-3">
+<label class="form-label">Message</label>
+<textarea class="form-control" rows="4" placeholder="How can I help you?" id="msg"></textarea>
+</div>
+<button type="button" class="btn btn-dark w-100 py-2" onclick="registerUser()">Submit Message</button>
+</form>
+<div class="mt-4 text-center">
+<div id="output" style="display:none;"></div>
+<p  class="mb-1"><i class="bi bi-telephone"></i> Phone: 94602XXXXX</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+     function registerUser() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let msg = document.getElementById("msg").value;
+
+        let nameRegex = /^[A-Za-z ]+$/;          
+        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;              
+
+      if (!nameRegex.test(name)) {
+        alert("Name should contain only letters.");
+        return;
+    }
+   if (!emailRegex.test(email)) {
+        alert("Invalid email format.");
+        return;
+    }
+    document.getElementById("output").style.display = "block";
+    document.getElementById("output").innerHTML =
+        "<h3>Submitted Details:</h3>" +
+        "<p><b>Name:</b> " + name + "</p>" +
+        "<p><b>Email:</b> " + email + "</p>" +
+        "<p><b>Message:</b> " + msg + "</p>";
+}
+</script>
+
+<div class="container my-4 text-center">
+<nav>
+<ul class="pagination justify-content-center">
+<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+<li class="page-item active"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+</div>
+
+<footer class="footer-fixed py-3 text-center">
+<div class="container">
+<p class="mb-0 text-muted">&copy; 2026 Vanshika Mathur | All Rights Reserved</p>
+</div>
+</footer>
+</body>
+</html>

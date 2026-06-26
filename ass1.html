@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <title>Javascript program</title>
+    <style>
+      body{
+         background-color:#CCCCFF;
+        }
+      h1{
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        background: linear-gradient(135deg,#6082B6, #72A0C1);
+        width: fit-content;
+        margin: 30px auto;
+        padding: 12px 30px;
+        border-radius: 30px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: auto;
+        font-family: Arial;
+        background-color: #f9f9f9;
+      }
+      th {
+        background-color:#6082B6;
+        color: white;
+        padding: 12px;
+        font-size: 18px;
+      }
+      td {
+        padding: 10px;
+        border: 1px solid #333;
+      }
+      button {
+        display: block;
+        margin: 50px auto;
+        padding: 10px 20px;
+        border-radius:10px;
+      }
+      button:hover{
+         background-color:#6082B6;
+         color:white;
+         box-shadow:5px 5px 10px black;
+       }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="text-align:center;">Find your Marksheet</h1>
+    <button onclick="naya()">Click to get marksheet</button>
+    <div id="output"></div>
+
+    <script>
+      function naya() {
+        let n = prompt("Enter your name:");
+        if (n === null) return;
+
+        let en = prompt("Enter your Roll no:");
+        if (en === null) return;
+
+        let m1 = parseInt(prompt("Enter marks in DBMS"));
+        let m2 = parseInt(prompt("Enter marks in Java"));
+        let m3 = parseInt(prompt("Enter marks in Python"));
+        let m4 = parseInt(prompt("Enter marks in Web Application"));
+        let m5 = parseInt(prompt("Enter marks in SEO"));
+
+        if ([m1, m2, m3, m4, m5].some(isNaN)) {
+          alert("Please enter valid numeric marks");
+          return;
+        }
+
+        if ([m1, m2, m3, m4, m5].some(x => x < 0 || x > 100)) {
+          alert("Marks must be between 0 and 100");
+          return;
+        }
+
+        let sum = m1 + m2 + m3 + m4 + m5;
+        let per = sum / 5;
+
+        let grade;
+        if (per >= 90) grade = "A+";
+        if (per >= 80) grade = "A";
+        else if (per >= 70) grade = "B";
+        else if (per >= 60) grade = "C";
+        else if (per >= 50) grade = "D";
+        else if (per >= 40) grade = "E";
+        else grade = "Fail";
+
+        let output = document.getElementById("output");
+        output.innerHTML = "";
+
+        output.innerHTML +=
+          "<table>" +
+          "<tr><th colspan='2'>Student Details</th></tr>" +
+          "<tr><td>Name</td><td>" + n + "</td></tr>" +
+          "<tr><td>Roll No</td><td>" + en + "</td></tr>" +
+          "<tr><td>DBMS</td><td>" + m1 + "</td></tr>" +
+          "<tr><td>Java</td><td>" + m2 + "</td></tr>" +
+          "<tr><td>Python</td><td>" + m3 + "</td></tr>" +
+          "<tr><td>Web Application</td><td>" + m4 + "</td></tr>" +
+          "<tr><td>SEO</td><td>" + m5 + "</td></tr>" +
+          "</table><br>";
+
+        output.innerHTML +=
+          "<table>" +
+          "<tr><th colspan='2'>Result</th></tr>" +
+          "<tr><td>Status</td><td>" + (grade === "Fail" ? "Fail" : "Pass") + "</td></tr>" +
+          "<tr><td>Total Marks</td><td>" + sum + "</td></tr>" +
+          "<tr><td>Percentage</td><td>" + per.toFixed(2) + "%</td></tr>" +
+          "<tr><td>Grade</td><td>" + grade + "</td></tr>" +
+          "</table>";
+      }
+    </script>
+  </body>
+</html>
+

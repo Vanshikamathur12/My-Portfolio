@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Email Registration Form</title>
+    <style>
+        body{
+    font-family: Arial, sans-serif;
+    background: lightgrey;
+    padding: 20px;
+  }
+.hello{
+    height: auto;
+    width: 420px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 2px solid #333;
+    border-radius: 8px;    
+    background: white;        
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+label{
+    font-weight: bold;
+}
+input{
+    width: 95%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #888;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+input:focus{
+    border-color: #0066ff;
+    box-shadow: 0 0 5px rgba(0,102,255,0.3);
+}
+button{
+    padding: 8px 15px;
+    background: #0066ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background: #004ccc;
+}
+#output{
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid green;
+    width: 380px;
+    border-radius: 5px;
+    display: none;
+}
+ </style>
+ </head>
+
+ <body>
+   <center><h2>Registration Form</h2></center>
+ <div class="hello">
+   <label>Name:</label><br>
+   <input type="text" id="name"><br>
+   <label>Email:</label><br>
+   <input type="text" id="email"><br>
+   <label>Password:</label><br>
+   <input type="password" id="password"><br>
+
+   <button onclick="registerUser()">Register</button>
+  <div>
+  <div id="output"></div>
+
+   <script>
+     function registerUser() {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        let nameRegex = /^[A-Za-z ]+$/;          
+        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
+        let passRegex = /^.{6,}$/;              
+
+      if (!nameRegex.test(name)) {
+        alert("Name should contain only letters.");
+        return;
+    }
+   if (!emailRegex.test(email)) {
+        alert("Invalid email format.");
+        return;
+    }
+    if (!passRegex.test(password)) {
+        alert("Password must be at least 6 characters long.");
+        return;
+    }
+
+    document.getElementById("output").style.display = "block";
+    document.getElementById("output").innerHTML =
+        "<h3>Submitted Details:</h3>" +
+        "<p><b>Name:</b> " + name + "</p>" +
+        "<p><b>Email:</b> " + email + "</p>" +
+        "<p><b>Password:</b> " + password + "</p>";
+}
+</script>
+
+</body>
+</html>
+

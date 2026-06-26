@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+<title>My Projects | Vanshika Mathur</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    body { 
+        padding-top: 100px; 
+        padding-bottom: 50px; 
+        background-color: #f8faff; 
+        color: #333;
+    }
+    .header-fixed { 
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        z-index: 1050; 
+        background: white; 
+        border-bottom: 1px solid #eee; 
+    }
+        .footer-fixed { 
+        position: fixed; 
+        bottom: 0; 
+        width: 100%; 
+        z-index: 1050; 
+        background: white; 
+        border-top: 1px solid #eee; 
+    }
+    .project-header-section {
+        background: #000;
+        color: white;
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .project-card { 
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        text-decoration: none !important;
+        color: inherit;
+        border: 1px solid #eee;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .project-card:hover { 
+        transform: translateY(-5px); 
+        border-color: #0047FF; 
+    }
+    .project-preview { 
+        height: 160px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-weight: bold; 
+    }
+    .project-details { padding: 15px; }
+        .btn-open {
+        color: #0047FF;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+</style>
+</head>
+<body>
+<header class="header-fixed">
+<div class="container py-2 d-flex justify-content-between align-items-center">
+<h1 class="h5 mb-0 fw-bold">Vanshika Mathur</h1>
+<p class="mb-0 text-muted small">BCA Student</p>
+</div>
+<nav class="navbar navbar-expand navbar-dark bg-dark py-1">
+    <div class="container">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link py-1" href="va.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active py-1" href="projects.html" style="color: #0047FF ">Projects</a></li>
+            <li class="nav-item"><a class="nav-link py-1" href="certifications.html">Certifications</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle py-1" href="#" data-bs-toggle="dropdown">Gallery</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="gallery.html">Open Gallery</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+</header>
+
+<section class="project-header-section">
+    <h2 class="h3 fw-bold mb-1">My Projects</h2>
+    <p class="mb-0 opacity-75 small">A collection of my technical work and design projects.</p>
+</section>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <a href="ass2.html" class="project-card shadow-sm">
+            <div class="project-preview bg-primary text-white">
+                WEB
+            </div>
+            <div class="project-details">
+                <h3 class="h6 fw-bold mb-2">Bill Generator</h3>
+                <p class="text-secondary small mb-2">A bill generator to generate purchased items and provide discount.</p>
+                <span class="btn-open">Open Project <i class="bi bi-arrow-right"></i></span>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a href="ass1.html" class="project-card shadow-sm">
+            <div class="project-preview bg-dark text-white">
+                WEB
+            </div>
+            <div class="project-details">
+                <h3 class="h6 fw-bold mb-2">Marksheet </h3>
+                <p class="text-secondary small mb-2">Marksheet for student result.</p>
+                <span class="btn-open">Open Project <i class="bi bi-arrow-right"></i></span>
+            </div>
+        </a>
+    </div>
+    
+    <div class="col-md-6">
+        <a href="fo.html" class="project-card shadow-sm">
+            <div class="project-preview bg-dark text-white">
+                WEB 
+            </div>
+            <div class="project-details">
+                <h3 class="h6 fw-bold mb-2">Email registration </h3>
+                <p class="text-secondary small mb-2">Email registration and showing what information is accepted </p>
+                <span class="btn-open">Open Project <i class="bi bi-arrow-right"></i></span>
+            </div>
+        </a>
+    </div>
+</div>
+</main>
+
+<footer class="footer-fixed py-2 text-center">
+<div class="container">
+<p class="mb-0 text-muted small">&copy; 2026 Vanshika Mathur</p>
+</div>
+</footer>
+</body>
+</html>
